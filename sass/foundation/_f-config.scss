@@ -1,0 +1,17 @@
+/* ======================================================
+// Project base setting
+// ------------------------------------------------------ */
+html {
+  font-size: calc(var(--base-font-size) * var(--rem));
+  scroll-padding-block-start: var(--header-height);
+}
+
+body {
+  font-family: var(--base-font-family);
+  color: var(--black-color);
+}
+
+img {
+  max-inline-size: 100%;
+  object-fit: cover;
+}

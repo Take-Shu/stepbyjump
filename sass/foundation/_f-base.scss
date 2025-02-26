@@ -1,0 +1,64 @@
+/* ======================================================
+// Project custom css
+// ------------------------------------------------------ */
+:root {
+  /* Calculation */
+  --layout-width-max: ;
+  --layout-width-min: ;
+  --inner-width-max: ;
+  --header-height-max: ;
+  --header-height-min: ;
+  --spacing-gutter: calc(17 * var(--fluid-ratio-min));
+  --fluid-ratio-max: calc(1 / var(--layout-width-max) * 100vw);
+  --fluid-ratio-min: calc(1 / var(--layout-width-min) * 100vw);
+  --rem: calc(1rem / var(--base-font-size));
+  --font-size_32-28: clamp(1.75rem, calc(1.662rem + 0.376vw), 2rem); /* min: 28px, max: 32px */
+  --container-size: min(
+    calc(var(--inner-width-max) * var(--rem)),
+    calc(100% - var(--spacing-gutter) * 2)
+  );
+  --header-size: clamp(
+    var(--header-height-min),
+    calc(var(--header-height-min) * var(--fluid-ratio-min)),
+    var(--header-height-max)
+  );
+
+  /* Font size */
+  --base-font-size: 16;
+  --font-size-xs: ;
+  --font-size-sm: ;
+  --font-size-md: ;
+  --font-size-lg: ;
+  --font-size-xl: ;
+
+/* Font family */
+  --base-font-family: "Noto Sans JP", serif;
+  --font-family: "Inter", sans-serif;
+
+/* Font weight */
+  --base-font-weight: 400;
+  --font-weight-700: 700;
+
+/* Line height */
+  --base-line-height: 1.5;
+  --line-height-xs: ;
+  --line-height-sm: ;
+  --line-height-md: ;
+  --line-height-lg: ;
+
+/* Letter spacing */
+  --base-letter-spacing: ;
+
+/* Color */
+  --base-color: #988C2C;
+  --white-color: ;
+  --black-color: ;
+  --color: ;
+
+/* Z-index */
+  --z-index-negative-layer: -1;
+  --z-index-0: 0;
+  --z-index-1: 1;
+  --z-index-header: 10;
+  --z-index-top-layer: 20;
+}
