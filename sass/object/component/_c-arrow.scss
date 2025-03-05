@@ -1,0 +1,29 @@
+/* ======================================================
+// Arrow
+// ------------------------------------------------------ */
+.c-link-arrow {
+  display: inline grid;
+  inline-size: calc(17 * var(--rem));
+  aspect-ratio: 1;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+  }
+  &::before {
+    inline-size: 100%;
+    block-size: 2px;
+    background-color: var(--white-color);
+    inset-block-end: 30%;
+  }
+  &::after {
+    block-size: 50%;
+    inline-size: 2px;
+    background-color: var(--white-color);
+    inset-inline-end: 9%;
+    inset-block-end: 27%;
+    rotate: -45deg;
+  }
+}

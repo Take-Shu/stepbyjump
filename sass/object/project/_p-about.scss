@@ -1,0 +1,89 @@
+/* ======================================================
+// About 
+// ------------------------------------------------------ */
+.p-about {
+  margin-block-start: clamp(
+    calc(120 * var(--rem)),
+    calc(120 * var(--fluid-ratio-min)),
+    calc(160 * var(--rem))
+  );
+
+  &__container {
+    @media (min-width: 769px) {
+      position: relative;
+    }
+  }
+
+  &__inner {
+    @media (min-width: 769px) {
+      inline-size: var(--container);
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline: 0;
+      translate: 0 -50%;
+      margin-inline: auto;
+    }
+  }
+
+  &__img {
+    inline-size: var(--container);
+    margin-inline: auto;
+    aspect-ratio: 335 / 248;
+    @media (min-width: 769px) {
+      inline-size: stretch;
+      aspect-ratio: 1366 / 656;
+      block-size: calc(656 * var(--rem));
+    }
+  }
+
+  &__text-container {
+    inline-size: var(--container);
+    margin-inline: auto;
+    @media (min-width: 769px) {
+     padding: calc(48 * var(--rem));
+      max-inline-size: calc(504 * var(--rem));
+      background-color: var(--white-color);
+      inline-size: revert;
+      margin-inline: revert;
+    }
+  }
+
+  &__title {
+    margin-block-start: max(
+      calc(40 * var(--rem) + var(--leading-trim)),
+      calc(40 * var(--fluid-ratio-min) + var(--leading-trim))
+    );
+    @media (min-width: 769px) {
+      margin-block-start: revert;
+    }
+  }
+
+  &__description {
+    margin-block-start: clamp(
+      calc(32 * var(--rem) + var(--leading-trim)),
+      calc(32 * var(--fluid-ratio-min) + var(--leading-trim)),
+      calc(40 * var(--rem) + var(--leading-trim))
+    );
+    margin-block-end: var(--leading-trim);
+  }
+
+  &__readmore {
+    margin-block-start: clamp(
+      calc(32 * var(--rem) + var(--leading-trim)),
+      calc(32 * var(--fluid-ratio-min) + var(--leading-trim)),
+      calc(40 * var(--rem) + var(--leading-trim))
+    );
+    text-align: center;
+    @media (min-width: 769px) {
+      text-align: start;
+    }
+  }
+
+  &__img-pc {
+    display: none;
+    @media (min-width: 769px) {
+      display: block;
+      margin-block-start: calc(32 * var(--rem));
+    }
+  }
+}

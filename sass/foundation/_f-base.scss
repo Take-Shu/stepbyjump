@@ -3,57 +3,74 @@
 // ------------------------------------------------------ */
 :root {
   /* Calculation */
-  --layout-width-max: ;
-  --layout-width-min: ;
-  --inner-width-max: ;
-  --header-height-max: ;
-  --header-height-min: ;
-  --spacing-gutter: calc(17 * var(--fluid-ratio-min));
+  --layout-width-max: 1366;
+  --layout-width-min: 375;
+  --inner-width-max: 1016;
+  --header-height-max: calc(80 * var(--rem));
+  --header-height-min: calc(56 * var(--rem));
+  --spacing-gutter: calc(20 * var(--fluid-ratio-min));
   --fluid-ratio-max: calc(1 / var(--layout-width-max) * 100vw);
   --fluid-ratio-min: calc(1 / var(--layout-width-min) * 100vw);
   --rem: calc(1rem / var(--base-font-size));
-  --font-size_32-28: clamp(1.75rem, calc(1.662rem + 0.376vw), 2rem); /* min: 28px, max: 32px */
-  --container-size: min(
+  --container: min(
     calc(var(--inner-width-max) * var(--rem)),
     calc(100% - var(--spacing-gutter) * 2)
   );
   --header-size: clamp(
     var(--header-height-min),
-    calc(var(--header-height-min) * var(--fluid-ratio-min)),
+    calc(56 * var(--fluid-ratio-min)),
     var(--header-height-max)
   );
+  --font-size_48_96: clamp(3rem, calc(1.865rem + 4.844vw), 6rem); /* min: 48px, max: 96px */
+  --font-size_32_48: clamp(2rem, calc(1.622rem + 1.615vw), 3rem); /* min: 32px, max: 48px */
+  --font-size_24_32: clamp(1.5rem, calc(1.311rem + 0.807vw), 2rem); /* min: 24px, max: 32px */
+  --font-size_20_24: clamp(1.25rem, calc(1.155rem + 0.404vw), 1.5rem); /* min: 20px, max: 24px */
+  --font-size_20_32: clamp(1.25rem, calc(0.966rem + 1.211vw), 2rem); /* min: 20px, max: 32px */
+  --font-size_14_16: clamp(0.875rem, calc(0.828rem + 0.202vw), 1rem); /* min: 14px, max: 16px */
+  --font-size_10_12: clamp(0.625rem, calc(0.578rem + 0.202vw), 0.75rem); /* min: 10px, max: 12px */
 
   /* Font size */
   --base-font-size: 16;
-  --font-size-xs: ;
-  --font-size-sm: ;
-  --font-size-md: ;
-  --font-size-lg: ;
-  --font-size-xl: ;
+  --font-size-xs: 10;
+  --font-size-sm: 12;
+  --font-size-md: 24;
+  --font-size-lg: 32;
+  --font-size-xl: 48;
+  --font-size-2xl: 96;
 
 /* Font family */
   --base-font-family: "Noto Sans JP", serif;
-  --font-family: "Inter", sans-serif;
+  --font-family-Lato: "Lato", sans-serif;
 
 /* Font weight */
   --base-font-weight: 400;
+  --font-weight-100: 100;
   --font-weight-700: 700;
+  --font-weight-900: 900;
+  --Noto-Sans-Bold: 700;
+  --Lato-Bold: 700;
+  --Lato-Black: 900;
 
 /* Line height */
   --base-line-height: 1.5;
   --line-height-xs: ;
-  --line-height-sm: ;
-  --line-height-md: ;
-  --line-height-lg: ;
+  --line-height-sm: 1.2;
+  --line-height-md: 1.3;
+  --line-height-lg: 2;
 
 /* Letter spacing */
-  --base-letter-spacing: ;
+  --base-letter-spacing: 0.02em;
 
 /* Color */
   --base-color: #988C2C;
-  --white-color: ;
-  --black-color: ;
-  --color: ;
+  --white-color: #ffffff;
+  --black-color: #222222;
+  --color-1: #040411;
+  --color-2: #101129;
+  --color-3: rgb(33, 45, 213);
+  --color-4: #b8614b;
+  --color-5: #f3f3f3;
+  --color-6: #182848;
 
 /* Z-index */
   --z-index-negative-layer: -1;

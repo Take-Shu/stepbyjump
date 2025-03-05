@@ -9,15 +9,24 @@
 // ------------------------------------------------------ */
 @use "./layout/l-header";
 @use "./layout/l-footer";
+@use "./layout/l-body";
 
 /* ======================================================
 // Object
 // ------------------------------------------------------ */
 /* Component */
-@use "./object/component/c-hoge";
+@use "./object/component/c-arrow";
+@use "./object/component/c-title";
+@use "./object/component/c-description";
+@use "./object/component/c-button";
 
 /* project */
-@use "./object/project/p-hoge";
+@use "./object/project/p-fv";
+@use "./object/project/p-services";
+@use "./object/project/p-about";
+@use "./object/project/p-works";
+@use "./object/project/p-recruit";
+@use "./object/project/p-contact";
 
 /* Utility */
-@use "./object/project/u-utility";
+@use "./object/utility/u-utility";

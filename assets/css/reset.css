@@ -517,19 +517,35 @@ p {
 @property --spacing-xl {
   syntax: '*';
   inherits: false;
-  initial-value: 2.5rem;
+  initial-value: 2rem;
 }
 
 @property --spacing-2xl {
   syntax: '*';
   inherits: false;
-  initial-value: 4rem;
+  initial-value: 2.5rem;
 }
 
 @property --spacing-3xl {
   syntax: '*';
   inherits: false;
+  initial-value: 4rem;
+}
+
+@property --spacing-4xl {
+  syntax: '*';
+  inherits: false;
   initial-value: 6.5rem;
+}
+
+/* ------------------------------------------------------
+// MARK: ### duration
+*/
+
+@property --duration-default {
+  syntax: "<time>";
+  inherits: false;
+  initial-value: 0.3s;
 }
 
 /* ------------------------------------------------------

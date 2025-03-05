@@ -1,0 +1,74 @@
+/* ======================================================
+// Button
+// ------------------------------------------------------ */
+.c-section__link {
+  /* Readmore Button */
+  --button-width: 256;
+  --button-height-min: 44;
+  --button-height-max: 64;
+  --gap-min: 18;
+  --gap-max: 16;
+  --reverse-responsive-gap: clamp(
+    calc(var(--gap-max) * var(--rem)),
+    calc(calc(var(--gap-min) * 1px) + ((var(--gap-max) - var(--gap-min)) * (100vw - (var(--layout-width-min) * 1px)) / (var(--layout-width-max) - var(--layout-width-min)))),
+    calc(var(--gap-min) * var(--rem))
+  );
+  font-size: var(--font-size_14_16);
+  color: var(--white-color);
+  background-color: var(--color-1);
+  letter-spacing: normal;
+  display: inline grid;
+  grid-template-columns: auto auto;
+  column-gap: var(--reverse-responsive-gap);
+  align-items: center;
+  justify-content: center;
+  inline-size: calc(var(--button-width) * var(--rem));
+  block-size: calc(var(--button-height-min) * var(--rem));
+  box-shadow: 0px 2px 4px 0px rgb(4 4 17 / 46%);
+  
+  &.services {
+    @media (min-width: 900px) {
+      block-size: calc(var(--button-height-max) * var(--rem));
+    }
+  }
+
+  &.about,
+  &.works,
+  &.recruit {
+    @media (min-width: 769px) {
+      block-size: calc(var(--button-height-max) * var(--rem));
+    }
+  }
+}
+
+.c-top-button {
+  --button-size: 50;
+  font-size: calc(var(--font-size-sm) * var(--rem));
+  inline-size: calc(var(--button-size) * var(--rem));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-3);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  color: var(--white-color);
+  position: fixed;
+  z-index: var(--z-index-top-layer);
+  inset-inline-end: calc(10 * var(--rem));
+  inset-block-end: calc(10 * var(--rem));
+  cursor: pointer;
+  @media (min-width: 769px) {
+    --button-size: 65;
+    font-size: calc(var(--base-font-size) * var(--rem));
+  }
+  & img {
+    --img-size: 20;
+    block-size: calc(var(--img-size) * var(--rem));
+    @media (min-width: 769px) {
+      --img-size: 30;
+    }
+  }
+  & span {
+    margin-block: var(--leading-trim);
+  }
+}

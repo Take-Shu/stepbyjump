@@ -30,52 +30,353 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body>
-  <header class="l-header">
-    <button type="button" class="l-header__menu-button js-modal-open-button" data-modal-open="drawer"
-      aria-labelledby="menu-button" aria-haspopup="true">MENU
-      <span id="menu-button" style="display: none">メニューを開く</span>
-      <span class="l-header__menu-icon">
-        <span class="l-header__menu-bar js-header__menu-bar"></span>
-      </span>
-    </button>
+<body class="l-body">
+  <header id="header" class="l-header pc">
+    <div class="l-header__container">
+      <a href="" class="l-header__logo-link">
+        <img src="./assets/img/logo_white.webp" alt="株式会社 STEPBYJUMP" class="l-header__logo-img">
+      </a>
+      <nav class="l-header__nav" aria-labelledby="header">
+        <ul class="l-header__nav-list">
+          <li class="l-header__nav-item">
+            <a href="#" class="l-header__nav-link">
+              <div class="l-header__nav-title_ja">トップ</div>
+              <div class="l-header__nav-title_en">TOP</div>
+            </a>
+          </li>
+          <li class="l-header__nav-item">
+            <a href="#" class="l-header__nav-link">
+              <div class="l-header__nav-title_ja">事業内容</div>
+              <div class="l-header__nav-title_en">SERVICES</div>
+            </a>
+          </li>
+          <li class="l-header__nav-item">
+            <a href="#" class="l-header__nav-link">
+              <div class="l-header__nav-title_ja">SBJについて</div>
+              <div class="l-header__nav-title_en">ABOUT</div>
+            </a>
+          </li>
+          <li class="l-header__nav-item">
+            <a href="#" class="l-header__nav-link">
+              <div class="l-header__nav-title_ja">SBJの実績</div>
+              <div class="l-header__nav-title_en">WORKS</div>
+            </a>
+          </li>
+          <li class="l-header__nav-item">
+            <a href="#" class="l-header__nav-link">
+              <div class="l-header__nav-title_ja">採用情報</div>
+              <div class="l-header__nav-title_en">RECRUIT</div>
+            </a>
+          </li>
+          <li class="l-header__nav-item">
+            <a href="#" class="l-header__nav-link">
+              <div class="l-header__nav-title_ja">お問い合わせ</div>
+              <div class="l-header__nav-title_en">CONTACT</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="l-header__menu-button js-modal-open-button" data-modal-open="drawer"
+        aria-labelledby="menu-button" aria-haspopup="true">
+        <span id="menu-button" style="display: none">メニューを開く</span>
+        <span class="l-header__menu-icon"></span>
+      </button>
+    </div>
   </header>
 
+  <div class="p-fv">
+    <div class="swiper p-fv__slide" aria-hidden="true">
+      <div class="swiper-wrapper p-fv__slide-wrap">
+        <div class="swiper-slide p-fv__slide-item">
+          <img src="/assets/img/slide_01.webp" alt="" class="p-fv__slide-img first">
+        </div>
+        <div class="swiper-slide p-fv__slide-item">
+          <img src="/assets/img/slide_02.webp" alt="" class="p-fv__slide-img second">
+        </div>
+        <div class="swiper-slide p-fv__slide-item">
+          <img src="/assets/img/slide_03.webp" alt="" class="p-fv__slide-img third">
+        </div>
+      </div>
+    </div>
+    <hgroup class="p-fv__title">
+      <h1 class="p-fv__title_en" translate="no">from the<br aria-hidden="true">beginning to<br class="p-fv__title_en-br" aria-hidden="true">infinity</h1>
+      <p class="p-fv__title_ja">終わりなき挑戦</p>
+      <p class="p-fv__title_ja">無限の可能性を求めて</p>
+    </hgroup>
+
+    <article class="p-fv__article" aria-labelledby="news">
+      <a href="" class="p-fv__article-link">
+        <h2 id="news-sp" class="p-fv__article-news">NEWS</h2>
+        <div class="p-fv__article-contents">
+          <h2 id="news-pc" class="p-fv__article-news pc">NEWS</h2>
+          <span class="p-fv__article-date"><time datetime="2021-06-12">2021.06.12</time></span>
+          <span class="p-fv__article-badge">お知らせ</span>
+          <p class="p-fv__article-text">新サイトを公開しました。</p>
+          <div class="p-fv__article-arrow-wrap"><span class="c-link-arrow"></span></div>
+        </div>
+      </a>
+    </article>
+  </div>
+
   <main>
+    <section id="section-services" class="p-services">
+      <div class="p-services__container">
+        <div class="p-services__wrap">
+          <img src="/assets/img/services.webp" alt="ロケットの打ち上げ場所を遠くから撮影した写真" class="p-services__img">
+          <div class="p-services__text-container">
+            <hgroup id="services" class="c-section__title p-services__title">
+              <h2 class="c-section__title_en" translate="no">services</h2>
+              <p class="c-section__title_ja">事業内容</p>
+            </hgroup>
+            <h3 class="c-section__subtitle p-services__subtitle">
+              人類の未来を<br aria-hidden="true">
+              最先端の宇宙技術で切り拓く
+            </h3>
+            <p class="c-section__description p-services__description">
+              私たちのモットーは、「宇宙から世界を革新する」ことです。<br class="p-services__description-br" aria-hidden="true">国家規模のミッションに挑み、世界中の専門家と共に次世代の宇宙技術を開発し、宇宙開発の限界を押し広げ、新たなフロンティアを追求しながら未来の可能性を広げるために日々挑戦を続けています。
+            </p>
+            <div class="c-section__readmore p-services__readmore">
+              <a href="" class="c-section__link services p-services__link" aria-labelledby="services">事業内容を更に知る<span class="c-link-arrow"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-about" class="p-about">
+      <div class="p-about__container">
+        <img src="/assets/img/about_01.webp" alt="工場を外から撮影した写真" class="p-about__img">
+        <div class="p-about__inner">
+          <div class="p-about__text-container">
+            <hgroup id="about" class="c-section__title p-about__title">
+              <h2 class="c-section__title_en" translate="no">about</h2>
+              <p class="c-section__title_ja">SBJについて</p>
+            </hgroup>
+            <p class="c-section__description p-about__description">
+              SBJは、宇宙をすべての人々にとってアクセス可能で有益なものにすることです。<br aria-hidden="true">革新的な研究、最先端のエンジニアリング、そして国際的なパートナーとの協力を通じて、新しい宇宙時代をリードしていきます。
+            </p>
+            <div class="c-section__readmore p-about__readmore">
+              <a href="" class="c-section__link about p-about__link" aria-labelledby="about">詳しく見る<span class="c-link-arrow"></span></a>
+            </div>
+            <img src="/assets/img/about_02.webp" alt="宇宙をイメージした画像" class="p-about__img-pc">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-works" class="p-works">
+      <div class="p-works__container">
+        <hgroup id="works" class="c-section__title p-works__title">
+          <h2 class="c-section__title_en" translate="no">works</h2>
+          <p class="c-section__title_ja">SBJの実績</p>
+        </hgroup>
+        <h3 class="c-section__subtitle p-works__subtitle">宇宙開発プロジェクト</h3>
+        <p class="c-section__description p-works__description">
+          SBJが携わってきた宇宙開発プロジェクトです。<br aria-hidden="true">その一部を紹介させていただきます。
+        </p>
+        <div class="p-works__article-container">
+          <article class="p-works__article">
+            <a href="" class="p-works__article-link" aria-labelledby="health">
+              <div class="p-works__article-text-wrap">
+                <h4 id="health" class="p-works__article-title">通信衛生</h4>
+                <p class="p-works__article-text">
+                  通信衛星「もみじ」打ち上げまでのストーリーについて記載しています。
+                </p>
+              </div>
+              <div class="p-works__article-img-wrap">
+                <img src="/assets/img/works_01.webp" alt="通信衛星の写真" class="p-works__article-img">
+              </div>
+            </a>
+          </article>
+          <article class="p-works__article">
+            <a href="" class="p-works__article-link" aria-labelledby="rocket">
+              <div class="p-works__article-text-wrap">
+                <h4 id="rocket" class="p-works__article-title">観測ロケット</h4>
+                <p class="p-works__article-text">
+                  観測ロケット「T-10」打ち上げまでのストーリーについて記載しています。
+                </p>
+              </div>
+              <div class="p-works__article-img-wrap">
+                <img src="/assets/img/works_02.webp" alt="観測ロケットの写真" class="p-works__article-img">
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="c-section__readmore p-works__readmore">
+          <a href="" class="c-section__link works p-works__link" aria-labelledby="works">実績一覧を見る<span class="c-link-arrow"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-recruit" class="p-recruit">
+      <hgroup id="recruit" class="c-section__title p-recruit__title">
+        <h2 class="c-section__title_en" translate="no">recruit</h2>
+        <p class="c-section__title_ja">採用情報</p>
+      </hgroup>
+      <ul class="p-recruit__list">
+        <li class="p-recruit__item">
+          <a href="" class="p-recruit__item-link">
+            <div class="p-recruit__link-text">
+              <span>SBJを知る</span>
+              <span class="c-link-arrow p-recruit__link-arrow"></span>
+            </div>
+            <div class="p-recruit__img-wrap">
+              <img src="/assets/img/recruit_01.webp" alt="" class="p-recruit__img">
+            </div>
+          </a>
+        </li>
+        <li class="p-recruit__item">
+          <a href="" class="p-recruit__item-link">
+            <div class="p-recruit__link-text"><span>SBJの一日</span><span class="c-link-arrow p-recruit__link-arrow"></span></div>
+            <div class="p-recruit__img-wrap">
+              <img src="/assets/img/recruit_02.webp" alt="" class="p-recruit__img">
+            </div>
+          </a>
+        </li>
+        <li class="p-recruit__item">
+          <a href="" class="p-recruit__item-link">
+            <div class="p-recruit__link-text"><span>求める人材</span><span class="c-link-arrow p-recruit__link-arrow"></span></div>
+            <div class="p-recruit__img-wrap">
+              <img src="/assets/img/recruit_03.webp" alt="" class="p-recruit__img">
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="c-section__readmore p-recruit__readmore">
+        <a href="" class="c-section__link recruit p-recruit__link" aria-labelledby="recruit">エントリーはこちら<span class="c-link-arrow"></span></a>
+      </div>
+    </section>
+
+    <section id="section-contact" class="p-contact">
+      <div class="p-contact__container">
+        <hgroup id="contact" class="c-section__title p-contact__title">
+          <h2 class="c-section__title_en p-contact__title_en" translate="no">contact</h2>
+          <p class="c-section__title_ja p-contact__title_ja">お問い合わせ</p>
+        </hgroup>
+        <p class="c-section__description p-contact__description">
+          SBJは様々なご要望にお答え致します。お気軽にご連絡ください。
+        </p>
+        <div class="p-contact__link-container">
+          <div class="p-contact__link-wrap">
+            <a href="" class="p-contact__link">製品・サービス<span class="c-link-arrow"></span></a>
+          </div>
+          <div class="p-contact__link-wrap">
+            <a href="" class="p-contact__link">採用について<span class="c-link-arrow"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="l-footer">
+    <div class="l-footer__container">
+      <nav class="l-footer__nav">
+        <ul class="l-footer__nav-list">
+          <li class="l-footer__nav-item">
+            <a href="#" class="l-footer__nav-link">トップ</a>
+          </li>
+          <li class="l-footer__nav-item">
+            <a href="#section-services" class="l-footer__nav-link">事業内容</a>
+          </li>
+          <li class="l-footer__nav-item">
+            <a href="section-about" class="l-footer__nav-link">SBJについて</a>
+          </li>
+          <li class="l-footer__nav-item">
+            <a href="section-works" class="l-footer__nav-link">SBJの実績</a>
+          </li>
+          <li class="l-footer__nav-item">
+            <a href="section-recruit" class="l-footer__nav-link">採用</a>
+          </li>
+          <li class="l-footer__nav-item">
+            <a href="section-contact" class="l-footer__nav-link">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="l-footer__company-container">
+        <img src="/assets/img/logo_white.webp" alt="株式会社 STEPBYJUMP" class="l-footer__logo-img">
+        <address>
+          <p class="l-footer__company">株式会社 STEPBYJUMP</p>
+          <p class="l-footer__address">
+            <span>〒000-000</span>
+            <span class="l-footer__address_sp">三重県鈴鹿市××××××</span>
+            <span class="l-footer__address_pc">三重県鈴鹿市×××××××××××</span>
+          </p>
+          <p class="l-footer__tel">
+            <a href="tel:0494000000">TEL 0494-00-0000</a>
+          </p>
+          <p class="l-footer__fax">FAX 000-0000-0000</p>
+        </address>
+      </div>
+    </div>
+
+    <div class="l-footer__copyright-container">
+      <small class="l-footer__copyright">Copyright &copy; STEPBYJUMP CO.LTD All Rights Reserved.</small>
+    </div>
   </footer>
 
-  <dialog id="drawer-sp" class="c-drawer" aria-labelledby="drawer-sp-title" autofocus>
-    <h1 id="drawer-sp-title" class="visually-hidden">折りたたみメニュー</h1>
-    <button type="button" class="c-drawer__close-button js-modal-close-button" aria-labelledby="drawer-sp-close-button"
-      aria-haspopup="false">
-      <span id="drawer-sp-close-button" style="display: none;">メニューを閉じる</span>
-    </button>
-  </dialog>
-  <dialog id="drawer-pc" class="c-drawer" aria-labelledby="drawer-pc-title" autofocus>
-    <h1 id="drawer-pc-title" class="visually-hidden">折りたたみメニュー</h1>
-    <button type="button" class="c-drawer__close-button js-modal-close-button" aria-labelledby="drawer-pc-close-button"
-      aria-haspopup="false">
-      <span id="drawer-pc-close-button" style="display: none;">メニューを閉じる</span>
-    </button>
+  <button type="button" class="c-top-button">
+    <img src="/assets/img/icon_rocket.webp" alt="トップに移動"><span aria-hidden="true">Top</span>
+  </button>
+
+  <dialog id="drawer" class="p-drawer" aria-labelledby="drawer-title" autofocus>
+    <h1 id="drawer-title" class="visually-hidden">折りたたみメニュー</h1>
+    <header class="p-drawer__header">
+      <img src="/assets/img/logo-white.webp" alt="株式会社 STEPBYJUMP" class="p-drawer__logo-img">
+      <button type="button" class="c-drawer__close-button js-modal-close-button" aria-labelledby="drawer-sp-close-button"
+        aria-haspopup="false">
+        <span id="drawer-sp-close-button" style="display: none;">メニューを閉じる</span>
+      </button>
+    </header>
+    <nav class="p-drawer__nav">
+      <ul class="p-drawer__nav-list">
+        <li class="p-drawer__nav-item">
+          <a href="#" class="p-drawer__nav-link">
+            <div class="p-drawer__nav-item-title_ja">トップ</div>
+            <div class="p-drawer__nav-item-title_en">top</div>
+          </a>
+        </li>
+        <li class="p-drawer__nav-item">
+          <a href="#section-services" class="p-drawer__nav-link">
+            <div class="p-drawer__nav-item-title_ja">事業内容</div>
+            <div class="p-drawer__nav-item-title_en">services</div>
+          </a>
+        </li>
+        <li class="p-drawer__nav-item">
+          <a href="#section-about" class="p-drawer__nav-link">
+            <div class="p-drawer__nav-item-title_ja">SBJについて</div>
+            <div class="p-drawer__nav-item-title_en">about</div>
+          </a>
+        </li>
+        <li class="p-drawer__nav-item">
+          <a href="#section-works" class="p-drawer__nav-link">
+            <div class="p-drawer__nav-item-title_ja">SBJの実績</div>
+            <div class="p-drawer__nav-item-title_en">works</div>
+          </a>
+        </li>
+        <li class="p-drawer__nav-item">
+          <a href="#section-recruit" class="p-drawer__nav-link">
+            <div class="p-drawer__nav-item-title_ja">採用情報</div>
+            <div class="p-drawer__nav-item-title_en">recruit</div>
+          </a>
+        </li>
+        <li class="p-drawer__nav-item">
+          <a href="#section-contact" class="p-drawer__nav-link">
+            <div class="p-drawer__nav-item-title_ja">お問い合わせ</div>
+            <div class="p-drawer__nav-item-title_en">contact</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </dialog>
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-    <defs>
-      <symbol id="" viewBox="">
-      </symbol>
-    </defs>
-  </svg>
-
-  <script src="https://kit.fontawesome.com/f4b801d171.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/swiper-bundle.min.js"></script>
+  <script src="/assets/js/swiper.js"></script>
   <script src="/assets/js/main.js"></script>
 </body>
 
