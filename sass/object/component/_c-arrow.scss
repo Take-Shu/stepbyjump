@@ -11,6 +11,7 @@
     content: "";
     display: inline-block;
     position: absolute;
+    transition: background-color var(--duration-default) ease;
   }
   &::before {
     inline-size: 100%;
@@ -25,5 +26,14 @@
     inset-inline-end: 9%;
     inset-block-end: 27%;
     rotate: -45deg;
+  }
+}
+
+@media (any-hover: hover) {
+  :where(.c-section__link:hover) .c-link-arrow {
+    &::before,
+    &::after {
+      background-color: var(--color-1);
+    }
   }
 }

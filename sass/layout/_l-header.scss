@@ -5,6 +5,32 @@
   --logo-size-max: 136;
   --logo-size-min: 120;
   background: linear-gradient(to right, var(--color-1) 0%, var(--color-6) 100%);
+  position: absolute;
+  z-index: var(--z-index-header);
+  inset-inline: 0;
+  inset-block-start: 0;
+  &.fade {
+    position: fixed;
+    inset-block-start: 0;
+    animation-name: fadein;
+    animation-duration: var(--duration-default);
+    animation-timing-function: var(--ease-out-expo);
+    animation-fill-mode: forwards;
+  }
+  _:lang(x)::-internal-media-controls-overlay-cast-button,
+  .fade.is-scroll-lock {
+    overflow: auto;
+    scrollbar-gutter: stable;
+  }
+
+  @keyframes fadein {
+    from {
+      translate: 0 -100%;
+    }
+    to {
+      translate: 0 0;
+    }
+  }
 
   &__container {
     padding-inline: var(--spacing-gutter);
@@ -54,15 +80,34 @@
           display: inline-block;
           position: absolute;
           inset-inline-start: 0;
-          background-color: var(--white-color);
+          background-color: var(--background-current);
           block-size: calc(30 * 1em / 16);
           inline-size: 1px;
           rotate: 45deg;
+        }
+        &::after {
+          content: "";
+          display: inline-block;
+          inline-size: 100%;
+          border-bottom: solid 1px var(--background-current);
+          opacity: 0;
+          transition: opacity var(--duration-default) ease;
+        }
+        @media (any-hover: hover) {
+          &:has(:any-link:hover) {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+        &:has([aria-current="true"]) {
+          color: var(--color-4);
         }
       }
       &-title_en {
         font-family: var(--font-family-Lato);
         font-size: calc(10 * var(--rem));
+        text-transform: uppercase;
       }
     }
   }
@@ -70,6 +115,7 @@
   &__menu-button {
     --menu-width-min: 20;
     --menu-height-min: 16;
+    color: var(--white-color);
     justify-self: end;
     display: grid;
     align-items: center;
@@ -87,14 +133,14 @@
     display: inline-block;
     inline-size: 100%;
     block-size: calc(2 * var(--rem));
-    background-color: var(--white-color);
+    background-color: var(--background-current);
     &::before,
     &::after {
       content: "";
       display: inline-block;
       inline-size: 100%;
       block-size: calc(2 * var(--rem));
-      background-color: var(--white-color);
+      background-color: var(--background-current);
       position: absolute;
     }
     &::before {

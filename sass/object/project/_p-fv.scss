@@ -4,7 +4,6 @@
 .p-fv {
   position: relative;
   background: linear-gradient(to right, var(--color-1) 0%, var(--color-6) 100%);
-
   &__slide-img{
     --img-height-max: 688;
     --img-height-min: 611;
@@ -48,6 +47,7 @@
     line-height: var(--line-height-sm);
     color: var(--white-color);
     text-shadow: 2px 2px 2px rgb(34 34 34 / 50%);
+    text-transform: capitalize;
     margin-block: var(--leading-trim);
     &-br {
       @media (min-width: 769px) {
@@ -120,18 +120,20 @@
     position: absolute;
     inset-block-end: var(--reverse-responsive-spacing);
     z-index: var(--z-index-1);
-    // padding-inline: var(--spacing-gutter);
-    // margin-inline: auto;
-    // inline-size: stretch;
     inline-size: min(
       calc(var(--inner-width-max) * var(--rem)),
       calc(100% - var(--spacing-gutter) * 2)
     );
     margin-inline: auto;
     inset-inline: 0;
-    &-link:any-link:hover {
-      & :where(.p-fv__article-contents) {
+
+    &-link {
+      display: block;
+      transition: translate var(--duration-default) var(--ease-out-expo);
+      @media (any-hover: hover) {
+        &:hover {
         translate: 0 -5px;
+        }
       }
     }
     
@@ -195,7 +197,6 @@
         calc(14 * var(--fluid-ratio-min)),
         calc(18 * var(--rem))
       );
-      transition: translate var(--duration-default) var(--ease-out-expo);
       @media (min-width: 769px) {
         background-color: var(--color-1);
         padding-inline: min(

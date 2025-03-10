@@ -4,6 +4,11 @@
 .c-section__title {
   display: grid;
   grid-template-columns: auto 1fr;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1s var(--ease-out-cubic);
+  &.show {
+    clip-path: inset(0);
+  }
 }
 
 .c-section__title_en {

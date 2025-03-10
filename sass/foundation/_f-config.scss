@@ -3,7 +3,7 @@
 // ------------------------------------------------------ */
 html {
   font-size: calc(var(--base-font-size) * var(--rem));
-  scroll-padding-block-start: var(--header-height);
+  scroll-padding-block-start: var(--header-size);
 }
 
 body {

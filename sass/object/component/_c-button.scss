@@ -25,7 +25,13 @@
   inline-size: calc(var(--button-width) * var(--rem));
   block-size: calc(var(--button-height-min) * var(--rem));
   box-shadow: 0px 2px 4px 0px rgb(4 4 17 / 46%);
-  
+  transition: color var(--duration-default) ease, background-color var(--duration-default) ease;
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-1);
+      background-color: var(--white-color);
+    }
+  }
   &.services {
     @media (min-width: 900px) {
       block-size: calc(var(--button-height-max) * var(--rem));
@@ -42,33 +48,59 @@
 }
 
 .c-top-button {
-  --button-size: 50;
-  font-size: calc(var(--font-size-sm) * var(--rem));
-  inline-size: calc(var(--button-size) * var(--rem));
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: var(--color-3);
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  color: var(--white-color);
   position: fixed;
   z-index: var(--z-index-top-layer);
   inset-inline-end: calc(10 * var(--rem));
   inset-block-end: calc(10 * var(--rem));
-  cursor: pointer;
-  @media (min-width: 769px) {
-    --button-size: 65;
-    font-size: calc(var(--base-font-size) * var(--rem));
-  }
-  & img {
-    --img-size: 20;
-    block-size: calc(var(--img-size) * var(--rem));
-    @media (min-width: 769px) {
-      --img-size: 30;
+  @media (any-hover: hover) {
+    &:hover {
+      animation-name: goToBack;
+      animation-duration: 0.5s;
+      animation-timing-function: var(--ease-out-expo);
+      animation-fill-mode: forwards;
     }
   }
-  & span {
-    margin-block: var(--leading-trim);
+  &__link {
+    --button-size: 50;
+    font-size: calc(var(--font-size-sm) * var(--rem));
+    inline-size: calc(var(--button-size) * var(--rem));
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--color-3);
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: scale var(--duration-default) ease;
+    @media (min-width: 769px) {
+      --button-size: 65;
+      font-size: calc(var(--base-font-size) * var(--rem));
+    }
+    & img {
+      --img-size: 20;
+      block-size: calc(var(--img-size) * var(--rem));
+      @media (min-width: 769px) {
+        --img-size: 30;
+      }
+    }
+    & span {
+      margin-block: var(--leading-trim);
+    }
+  }
+  &.fadeout {
+    display: none;
+  }
+} 
+
+@keyframes goToBack {
+  from {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -5px;
+  }
+  to {
+    translate: 0 0;
   }
 }
