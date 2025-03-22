@@ -84,25 +84,23 @@
           block-size: calc(30 * 1em / 16);
           inline-size: 1px;
           rotate: 45deg;
+          z-index: var(--z-index-1);
         }
         &::after {
           content: "";
           display: inline-block;
-          inline-size: 100%;
           border-bottom: solid 1px var(--background-current);
           opacity: 0;
           transition: opacity var(--duration-default) ease;
         }
         @media (any-hover: hover) {
-          &:has(:any-link:hover) {
-            &::after {
-              opacity: 1;
-            }
+          &:has(:any-link:hover)::after {
+            opacity: 1;
           }
         }
-        &:has([aria-current="true"]) {
-          color: var(--color-4);
-        }
+      }
+      &-link[aria-current="true"] {
+        color: var(--color-4);
       }
       &-title_en {
         font-family: var(--font-family-Lato);

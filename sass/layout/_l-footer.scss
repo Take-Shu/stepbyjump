@@ -24,6 +24,7 @@
       order: 2;
       justify-self: end;
       margin-block-start: calc(98 * var(--rem));
+      inline-size: calc(276 * var(--rem));
     }
   }
 
@@ -143,6 +144,9 @@
         }
       }
     }
+  }
+  &__fax {
+    pointer-events: none;
   }
 
   &__copyright-container {

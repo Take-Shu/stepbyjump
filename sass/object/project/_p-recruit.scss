@@ -43,6 +43,7 @@
   }
 
   &__item {
+    display: block;
     inline-size: min(
       calc(620 * var(--rem)),
       100%
@@ -66,8 +67,14 @@
   }
 
   &__item-link {
+    display: block;
     z-index: var(--z-index-0);
     position: relative;
+    inline-size: min(
+      calc(620 * var(--rem)),
+      100%
+    );
+    aspect-ratio: 375 / 200;
     @media (min-width: 769px) {
       --link-text-height: 56;
       &::before {

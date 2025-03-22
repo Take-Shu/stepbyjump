@@ -43,6 +43,7 @@
 /* Font family */
   --base-font-family: "Noto Sans JP", serif;
   --font-family-Lato: "Lato", sans-serif;
+  --font-family-loading: Helvetica, Arial, sans-serif;
 
 /* Font weight */
   --base-font-weight: 400;
@@ -68,15 +69,18 @@
   --black-color: #222222;
   --color-1: #040411;
   --color-2: #101129;
-  --color-3: rgb(33, 45, 213);
+  --color-3: #212dd5;
   --color-4: #b8614b;
   --color-5: #f3f3f3;
   --color-6: #182848;
+  --color-7: #000000;
+  --color-8: #35C4F0;
 
-/* Z-index */
+/* z-index */
   --z-index-negative-layer: -1;
   --z-index-0: 0;
   --z-index-1: 1;
   --z-index-header: 10;
   --z-index-top-layer: 20;
+  --z-index-loading: 30;
 }

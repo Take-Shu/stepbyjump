@@ -15,6 +15,7 @@
   <meta property="og:site_name" content="株式会社 STEPBYJUMP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@shu_keizoku">
+  <meta name="format-detection" content="telephone=no">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
@@ -34,10 +35,23 @@
 </head>
 
 <body class="l-body">
+  <div id="loading" class="p-loading">
+    <div class="p-loading__contents">
+      <div aria-hidden="true" translate="no">G</div>
+      <div aria-hidden="true" translate="no">N</div>
+      <div aria-hidden="true" translate="no">I</div>
+      <div aria-hidden="true" translate="no">D</div>
+      <div aria-hidden="true" translate="no">A</div>
+      <div aria-hidden="true" translate="no">O</div>
+      <div aria-hidden="true" translate="no">L</div>
+      <span class="visually-hidden" translate="no" lang="en">loading</span>
+    </div>
+  </div>
+
   <header id="header" class="l-header pc js-header">
     <div class="l-header__container">
       <a href="" class="l-header__logo-link">
-        <img src="./assets/img/logo_white.webp" alt="ロゴ: 株式会社 STEPBYJUMP(ステップバイジャンプ)" class="l-header__logo-img js-header-logo">
+        <img src="./assets/img/logo_white.webp" width="136" height="31" fetchpriority="high" alt="ロゴ: 株式会社 STEPBYJUMP(ステップバイジャンプ)" class="l-header__logo-img js-header-logo">
       </a>
       <nav class="l-header__nav" aria-label="サイトナビゲーション ヘッダー">
         <ul class="l-header__nav-list js-nav-list">
@@ -91,13 +105,13 @@
     <div class="swiper p-fv__slide" aria-hidden="true">
       <div class="swiper-wrapper p-fv__slide-wrap">
         <div class="swiper-slide p-fv__slide-item">
-          <img src="/assets/img/slide_01.webp" alt="" class="p-fv__slide-img first">
+          <img src="/assets/img/slide_01.webp" width="1366" height="688" fetchpriority="high" alt="" class="p-fv__slide-img first">
         </div>
         <div class="swiper-slide p-fv__slide-item">
-          <img src="/assets/img/slide_02.webp" alt="" class="p-fv__slide-img second">
+          <img src="/assets/img/slide_02.webp" width="1366" height="688" fetchpriority="high" alt="" class="p-fv__slide-img second">
         </div>
         <div class="swiper-slide p-fv__slide-item">
-          <img src="/assets/img/slide_03.webp" alt="" class="p-fv__slide-img third">
+          <img src="/assets/img/slide_03.webp" width="1366" height="688" fetchpriority="high" alt="" class="p-fv__slide-img third">
         </div>
       </div>
     </div>
@@ -126,7 +140,7 @@
     <section id="section-services" class="p-services js-observer-target">
       <div class="p-services__container">
         <div class="p-services__wrap">
-          <img src="/assets/img/services.webp" alt="ロケットの打ち上げ場所を遠くから撮影した写真" class="p-services__img">
+          <img src="/assets/img/services.webp" width="620" height="440" loading="lazy" alt="ロケットの打ち上げ場所を遠くから撮影した写真" class="p-services__img">
           <div class="p-services__text-container">
             <hgroup id="services" class="c-section__title p-services__title js-observer-target-title">
               <h2 class="c-section__title_en" translate="no" lang="en">services</h2>
@@ -162,7 +176,7 @@
             <div class="c-section__readmore p-about__readmore">
               <a href="" class="c-section__link about p-about__link" aria-labelledby="about">詳しく見る<span class="c-link-arrow"></span></a>
             </div>
-            <img src="/assets/img/about_02.webp" alt="宇宙をイメージした画像" class="p-about__img-pc">
+            <img src="/assets/img/about_02.webp" width="408" height="120" alt="宇宙をイメージした画像" class="p-about__img-pc">
           </div>
         </div>
       </div>
@@ -179,7 +193,7 @@
           SBJが携わってきた宇宙開発プロジェクトです。<br aria-hidden="true">その一部を紹介させていただきます。
         </p>
         <div class="p-works__article-container">
-          <article class="p-works__article">
+          <article class="p-works__article" aria-labelledby="health">
             <a href="" class="p-works__article-link" aria-labelledby="health">
               <div class="p-works__article-text-wrap">
                 <h4 id="health" class="p-works__article-title">通信衛生</h4>
@@ -188,11 +202,11 @@
                 </p>
               </div>
               <div class="p-works__article-img-wrap">
-                <img src="/assets/img/works_01.webp" alt="通信衛星の写真" class="p-works__article-img">
+                <img src="/assets/img/works_01.webp" width="472" height="240" loading="lazy" alt="通信衛星の写真" class="p-works__article-img">
               </div>
             </a>
           </article>
-          <article class="p-works__article">
+          <article class="p-works__article" aria-labelledby="rocket">
             <a href="" class="p-works__article-link" aria-labelledby="rocket">
               <div class="p-works__article-text-wrap">
                 <h4 id="rocket" class="p-works__article-title">観測ロケット</h4>
@@ -201,7 +215,7 @@
                 </p>
               </div>
               <div class="p-works__article-img-wrap">
-                <img src="/assets/img/works_02.webp" alt="観測ロケットの写真" class="p-works__article-img">
+                <img src="/assets/img/works_02.webp" width="472" height="240" loading="lazy" alt="観測ロケットの写真" class="p-works__article-img">
               </div>
             </a>
           </article>
@@ -225,7 +239,7 @@
               <span class="c-link-arrow p-recruit__link-arrow"></span>
             </div>
             <div class="p-recruit__img-wrap">
-              <img src="/assets/img/recruit_01.webp" alt="" class="p-recruit__img">
+              <img src="/assets/img/recruit_01.webp" width="312" height="240" loading="lazy" alt="" class="p-recruit__img">
             </div>
           </a>
         </li>
@@ -233,7 +247,7 @@
           <a href="" class="p-recruit__item-link">
             <div class="p-recruit__link-text"><span>SBJの一日</span><span class="c-link-arrow p-recruit__link-arrow"></span></div>
             <div class="p-recruit__img-wrap">
-              <img src="/assets/img/recruit_02.webp" alt="" class="p-recruit__img">
+              <img src="/assets/img/recruit_02.webp" width="312" height="240" loading="lazy" alt="" class="p-recruit__img">
             </div>
           </a>
         </li>
@@ -241,7 +255,7 @@
           <a href="" class="p-recruit__item-link">
             <div class="p-recruit__link-text"><span>求める人材</span><span class="c-link-arrow p-recruit__link-arrow"></span></div>
             <div class="p-recruit__img-wrap">
-              <img src="/assets/img/recruit_03.webp" alt="" class="p-recruit__img">
+              <img src="/assets/img/recruit_03.webp" width="312" height="240" loading="lazy" alt="" class="p-recruit__img">
             </div>
           </a>
         </li>
@@ -320,24 +334,24 @@
     </div>
   </footer>
 
-  <button type="button" class="c-top-button">
+  <button type="button" class="c-top-button js-top-button">
     <a href="#" class="c-top-button__link js-link-button">
-      <img src="/assets/img/icon_rocket.webp" alt="トップに移動"><span aria-hidden="true">Top</span>
+      <img src="/assets/img/icon_rocket.webp" width="25" height="30" loading="lazy" alt="トップに移動"><span aria-hidden="true">Top</span>
     </a>
   </button>
 
   <dialog id="drawer" class="p-drawer" aria-labelledby="drawer-title" autofocus>
     <h1 id="drawer-title" class="visually-hidden">折りたたみメニュー</h1>
-    <header class="p-drawer__header">
+    <header class="p-drawer__header" aria-labelledby="drawer-title">
       <a href="#" class="p-drawer__header-logo-link">
-        <img src="/assets/img/logo_white.webp" alt="株式会社 STEPBYJUMP" class="p-drawer__logo-img">
+        <img src="/assets/img/logo_white.webp" width="271" height="58" loading="lazy" alt="株式会社 STEPBYJUMP" class="p-drawer__logo-img">
       </a>
       <button type="button" class="p-drawer__close-button js-modal-close-button" aria-labelledby="drawer-close-button"
         aria-haspopup="false">
         <span id="drawer-close-button" style="display: none;">メニューを閉じる</span>
       </button>
     </header>
-    <nav class="p-drawer__nav" aria-label="サイトナビゲーション 折りたたみメニュー">
+    <nav class="p-drawer__nav" aria-labelledby="drawer-title">
       <ul class="p-drawer__nav-list">
         <li class="p-drawer__nav-item">
           <a href="#" class="p-drawer__nav-link js-link-button">

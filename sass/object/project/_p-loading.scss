@@ -1,0 +1,105 @@
+/* ======================================================
+// Loading
+// ------------------------------------------------------ */
+.p-loading {
+  /* Loading view */
+  background-color: var(--color-7);
+  inset: 0;
+  position: fixed;
+  z-index: var(--z-index-loading);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  &__contents {
+    position: relative;
+    display: grid;
+    align-items: center;
+    inline-size: min(
+      100%,
+      calc(600 * var(--rem))
+    );
+    block-size: calc(36 * var(--rem));
+    overflow: visible;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:default;
+    font-size: var(--font-size_14_16);
+
+    & div {
+      position: absolute;
+      display: inline-grid;
+      align-items: center;
+      inline-size: calc(20 * var(--rem));
+      block-size: calc(36 * var(--rem));
+      opacity: 0;
+      font-family: var(--font-family-loading);
+      animation: loading 2s linear infinite;
+      -o-animation:loading 2s linear infinite;
+      -moz-animation:loading 2s linear infinite;
+      -webkit-animation:loading 2s linear infinite;
+      rotate: 180deg;
+      -o-transform:rotate(180deg);
+      -moz-transform:rotate(180deg);
+      -webkit-transform:rotate(180deg);
+      color: var(--color-8);
+
+      &:not(:nth-child(1)) {
+        --delay: 0.2s; 
+        animation-delay: var(--delay);
+        -o-animation-delay: var(--delay);
+        -moz-animation-delay: var(--delay);
+        -webkit-animation-delay: var(--delay);
+      }
+      &:nth-child(3) {
+        --delay: 0.4s;
+      }
+      &:nth-child(4) {
+        --delay: 0.6s;
+      }
+      &:nth-child(5) {
+        --delay: 0.8s;
+      }
+      &:nth-child(6) {
+        --delay: 1s
+      }
+      &:nth-child(7) {
+        --delay: 1.2s;
+      }
+    } 
+  }
+}
+
+@keyframes loading {
+  /* Loading animation */
+  0% {
+    inset-inline-start: 0;
+    opacity: 0;
+  }
+  35% {
+    inset-inline-start: 41%;
+    rotate: 0deg;
+    -moz-transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+    opacity: 1;
+  }
+  65% {
+    inset-inline-start: 59%;
+    rotate: 0deg;
+    -moz-transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    inset-inline-start: 100%;
+    rotate: -180deg;
+    -moz-transform:rotate(-180deg);
+		-webkit-transform:rotate(-180deg);
+		-o-transform:rotate(-180deg);
+    opacity: 0;
+  }
+}

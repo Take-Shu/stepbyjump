@@ -4,11 +4,8 @@
 .p-drawer {
   --logo-size-max: 136;
   --logo-size-min: 120;
-  position: fixed;
-  inset: 0;
   translate: 0 0;
   transition: translate var(--duration-default) var(--ease-out-expo);
-  z-index: var(--z-index-top-layer);
   overflow: auto;
   &__header {
     inline-size: var(--container);
@@ -107,13 +104,23 @@
     background-color: var(--color-1);
     transition: translate var(--duration-default) var(--ease-out-expo);
   }
-  
+
   &.show-from,
   &.hide-to {
     /* For animation class */
     translate: 100% 0;
     &::backdrop {
       translate: 100% 0;
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  /* Firefox only */
+  .p-drawer {
+    background-color: var(--color-1);
+    &::backdrop {
+      background-color: transparent;
     }
   }
 }

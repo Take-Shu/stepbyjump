@@ -52,6 +52,8 @@
   z-index: var(--z-index-top-layer);
   inset-inline-end: calc(10 * var(--rem));
   inset-block-end: calc(10 * var(--rem));
+  opacity: 1;
+  transition: opacity var(--duration-default) ease;
   @media (any-hover: hover) {
     &:hover {
       animation-name: goToBack;
@@ -80,6 +82,7 @@
     & img {
       --img-size: 20;
       block-size: calc(var(--img-size) * var(--rem));
+      object-fit: contain;
       @media (min-width: 769px) {
         --img-size: 30;
       }
@@ -89,7 +92,8 @@
     }
   }
   &.fadeout {
-    display: none;
+    // display: none;
+    opacity: 0;
   }
 } 
 
