@@ -91,7 +91,7 @@
   }
 
   &__title {
-    margin-block-start: calc(40 * var(--rem));
+    margin-block-start: calc((40 * var(--rem)) + var(--leading-trim));
     @media (min-width: 900px) {
       margin-block-start: revert;
     }
